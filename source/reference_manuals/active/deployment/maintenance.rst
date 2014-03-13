@@ -6,8 +6,8 @@ Maintenance problems and solution for them.
 
 
 
-Introduction
-============
+PlacelessTranslationService You have a stale entry for
+======================================================
 
 
 In the log message appears like this::
@@ -48,3 +48,25 @@ So:
 - If you no longer want to use a product that is already installed in
   Plone, first uninstall it and only then remove it from the file
   system. 
+
+
+
+Cannot register transform lynx_dump error log entries in Plone
+==============================================================
+
+
+In the instance.log is (mgirated from 3.3) gets messages like::
+
+    2012-07-09 17:40:38 ERROR PortalTransforms Cannot register transform lynx_dump, using BrokenTransform: Error Unable to find binary "lynx" in /Users/moo/tools/bin:/Users/moo/.zsh/bin:/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+    
+
+It is not a real problem, unless you use the lynx_dump transform (nothing in stock Plone uses it, and other transforms provide text/html to text/plain too).
+
+The solutin to deal with it:
+
+1. Remove the lynx_dump transform. Go to the ZMI, find the portal_transforms tool, check the box by the lynx_dump entry, and hit the [Delete] button at the bottom of the form. This is harmless if you don't use the transform.    
+2. In the portal_transforms click on the tab Reload transforms 
+
+
+
+    
