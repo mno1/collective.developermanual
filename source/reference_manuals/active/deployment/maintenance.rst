@@ -10,7 +10,7 @@ Introduction
 ============
 
 
-In the log message sometime apear message like this::
+In the log message appears like this::
 
     2009-09-14 15:45:44 INFO PlacelessTranslationService You have a stale entry for 'Products.ZWiki' in your ZMI Products section.You should consider removing it. 
 
