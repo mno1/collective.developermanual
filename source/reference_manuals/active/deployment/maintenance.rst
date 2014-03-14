@@ -1,6 +1,6 @@
-===========
-Maintenance
-===========
+=======================
+Maintenance Plone 3.3.x
+=======================
 
 Maintenance problems and solution for them.
 
@@ -70,3 +70,18 @@ The solutin to deal with it:
 
 
     
+ERROR Zope.ZCatalog reindexIndex could not resolve an object from the uid
+=========================================================================
+
+When trying to insert a new page I get an error complaining about some lost uid::
+
+    ERROR Zope.ZCatalog reindexIndex could not resolve an object from the uid '/path/to/the/object'
+    
+
+Proposed solution:
+
+When you want to recover from the error (without understanding where the problem comes from), 
+you could use the "Update catalog" from the "Advanced" tab. 
+It will uncatalog any object that cannot be resolved.
+
+
